@@ -1,8 +1,11 @@
 let React = require('react');
+let Clock = require('Clock');
 
 let Countdown = () => {
   return (
-    <p>Countdown component</p>
+    <div>
+      <Clock totalSeconds={62}/>
+    </div>
   )
 };
 

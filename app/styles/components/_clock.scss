@@ -1,0 +1,12 @@
+.clock {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  margin: 10rem auto;
+
+  .clock-text {
+    color: $clock-text-color;
+    font-size: 3.25rem;
+    font-weight: 300;
+  }
+}
