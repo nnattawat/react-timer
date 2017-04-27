@@ -18,7 +18,7 @@ let Navigation = () => {
       <div className='top-bar-right'>
         <ul className='menu'>
           <li className='menu-text'>
-            Created by nnattawat
+            Created by <a href="https://github.com/nnattawat/">nnattawat</a>
           </li>
         </ul>
       </div>
