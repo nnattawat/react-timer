@@ -22,6 +22,7 @@ module.exports = {
   resolve: {
     root: __dirname,
     alias: {
+      Controls: 'app/components/Controls.jsx',
       Clock: 'app/components/Clock.jsx',
       Countdown: 'app/components/Countdown.jsx',
       CountdownForm: 'app/components/CountdownForm.jsx',
