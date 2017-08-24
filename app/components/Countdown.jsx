@@ -43,7 +43,7 @@ let Countdown = React.createClass({
       this.setState({
         count: newCount,
         countdownStatus: countdownStatus
-      })
+      });
     }, 1000);
   },
 
@@ -51,7 +51,7 @@ let Countdown = React.createClass({
     this.setState({
       count: seconds,
       countdownStatus: 'started'
-    })
+    });
   },
 
   handleStatusChange: function(newStatus) {
