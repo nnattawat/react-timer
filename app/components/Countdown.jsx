@@ -22,11 +22,31 @@ let Countdown = React.createClass({
         case 'stopped':
           this.setState({count: 0});
         case 'paused':
-          clearInterval(this.timer);
-          this.timer = undefined
+          this.clearTimer();
           break;
       }
     }
+  },
+
+  componentWillUpdate: function(nextProps, nextState) {
+  },
+
+  // called before mount so there is no DOM yet
+  componentWillMount: function() {
+  },
+
+  // called right after component is mount. DOM is availble
+  componentWillMount: function() {
+  },
+
+  // called before unmount
+  componentWillUnmount: function() {
+    this.clearTimer();
+  },
+
+  clearTimer: function() {
+    clearInterval(this.timer);
+    this.timer = undefined
   },
 
   startTimer: function() {
