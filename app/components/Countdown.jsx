@@ -4,7 +4,7 @@ let CountdownForm = require('CountdownForm');
 let Controls      = require('Controls');
 
 let Countdown = React.createClass({
-  getInitialState: function() {
+  getInitialState() {
     return {
       count: 0,
       countdownStatus: 'stopped'
@@ -12,7 +12,7 @@ let Countdown = React.createClass({
   },
 
   // called when props or state get updated
-  componentDidUpdate: function(prevProps, prevState) {
+  componentDidUpdate(prevProps, prevState) {
     let {countdownStatus} = this.state;
     if (countdownStatus !== prevState.countdownStatus) {
       switch (countdownStatus) {
@@ -28,28 +28,28 @@ let Countdown = React.createClass({
     }
   },
 
-  componentWillUpdate: function(nextProps, nextState) {
+  componentWillUpdate(nextProps, nextState) {
   },
 
   // called before mount so there is no DOM yet
-  componentWillMount: function() {
+  componentWillMount() {
   },
 
   // called right after component is mount. DOM is availble
-  componentWillMount: function() {
+  componentWillMount() {
   },
 
   // called before unmount
-  componentWillUnmount: function() {
+  componentWillUnmount() {
     this.clearTimer();
   },
 
-  clearTimer: function() {
+  clearTimer() {
     clearInterval(this.timer);
     this.timer = undefined
   },
 
-  startTimer: function() {
+  startTimer() {
     this.timer = setInterval( () => {
       let {count, countdownStatus} = this.state;
 
@@ -67,20 +67,20 @@ let Countdown = React.createClass({
     }, 1000);
   },
 
-  handleSetCountdown: function(seconds) {
+  handleSetCountdown(seconds) {
     this.setState({
       count: seconds,
       countdownStatus: 'started'
     });
   },
 
-  handleStatusChange: function(newStatus) {
+  handleStatusChange(newStatus) {
     this.setState({
       countdownStatus: newStatus
     })
   },
 
-  renderFormOrControls: function() {
+  renderFormOrControls() {
     let {countdownStatus} = this.state;
     switch (countdownStatus) {
       case 'stopped':
@@ -91,7 +91,7 @@ let Countdown = React.createClass({
     }
   },
 
-  render: function() {
+  render() {
     let { count } = this.state;
     return (
       <div>

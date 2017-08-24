@@ -7,13 +7,13 @@ let Controls = React.createClass({
     onStatusChange: React.PropTypes.func.isRequired
   },
 
-  onStatusChange: function(newStatus) {
+  onStatusChange(newStatus) {
     return () => {
       this.props.onStatusChange(newStatus)
     }
   },
 
-  renderStartStopButton: function() {
+  renderStartStopButton() {
     let {countdownStatus} = this.props;
 
     if (countdownStatus == 'started') {
@@ -23,7 +23,7 @@ let Controls = React.createClass({
     }
   },
 
-  render: function() {
+  render() {
     return (
       <div className="controls">
         {this.renderStartStopButton()}

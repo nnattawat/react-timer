@@ -1,7 +1,7 @@
 let React = require('react');
 
 let Clock = React.createClass({
-  formatSeconds: function(totalSeconds) {
+  formatSeconds(totalSeconds) {
     let seconds = totalSeconds % 60;
     let minutes = Math.floor(totalSeconds / 60);
 
@@ -16,11 +16,11 @@ let Clock = React.createClass({
     return `${minutes}:${seconds}`;
   },
 
-  getDefaultProps: function() {
+  getDefaultProps() {
     totalSeconds: 0
   },
 
-  render: function() {
+  render() {
     let { totalSeconds } = this.props;
     return (
       <div className="clock">
