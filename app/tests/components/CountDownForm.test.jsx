@@ -34,4 +34,16 @@ describe('CountdownForm', () => {
 
     expect(spy).toNotHaveBeenCalled();
   });
+
+  it('should NOT call onSetCountdown when no input entered', () => {
+    let spy = expect.createSpy();
+    let countdownForm = TestUtils.renderIntoDocument(<CountdownForm onSetCountdown={spy}/>);
+    let $el = $(ReactDOM.findDOMNode(countdownForm));
+
+    countdownForm.refs.seconds.value = '';
+
+    TestUtils.Simulate.submit($el.find('form')[0]);
+
+    expect(spy).toNotHaveBeenCalled();
+  });
 });
