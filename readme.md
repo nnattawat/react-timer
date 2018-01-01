@@ -12,8 +12,4 @@
   node server.js
 ```
 
-## Deploy
-```bash
-  bin/deploy.sh
-```
-App is deployed at http://nattawat-react-timer.s3-website-ap-southeast-2.amazonaws.com/
+App is deployed at https://nnattawat-react-timer.herokuapp.com/
